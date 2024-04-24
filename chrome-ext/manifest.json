@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "hi",
+    "version": "1.0",
+    "description": "hi",
+    "permissions": ["activeTab"],
+    "host_permissions": ["http://localhost:5000/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/", "https://visualstudio.microsoft.com/visual-cpp-build-tools/"],
+        "js": ["contentScript.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
