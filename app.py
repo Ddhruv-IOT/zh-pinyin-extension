@@ -27,14 +27,14 @@ def convert_to_pinyin(chinese_text):
 def process_text():
     paragraph_text = request.json.get('text', '')
     print(paragraph_text)
-    pinyin_text = convert_to_pinyin(paragraph_text)
-    print(pinyin_text)  # Output: 'hē lōu hǎo ār yù?
-    # chinese_text = translate_to_chinese(paragraph_text)
+    # pinyin_text = convert_to_pinyin(paragraph_text)
+    # print(pinyin_text)  # Output: 'hē lōu hǎo ār yù?
+    chinese_text = translate_to_chinese(paragraph_text)
 
     # Here, you can process the paragraph text as you want
     # For simplicity, let's just convert it to uppercase
-    # processed_text = chines?e_text#paragraph_text.upper()
-    processed_text = pinyin_text
+    processed_text = chinese_text#paragraph_text.upper()
+    # processed_text = pinyin_text
     return {'processed_text': processed_text}
 
 @app.route('/process_text', methods=['OPTIONS'])
