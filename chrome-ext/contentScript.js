@@ -65,12 +65,76 @@
 //   return true; // If all child nodes are text nodes or whitespace nodes, return true
 // }
 
+// logic 2 MOUSE UP
 
-document.addEventListener("mouseup", function(event) {
-    var selectedText = window.getSelection().toString().trim();
-    if (selectedText !== "") {
-        // color to red 
-        event.target.style.color = "green";
+// document.addEventListener("mouseup", function(event) {
+//     var selectedText = window.getSelection().toString().trim();
+//     if (selectedText !== "") {
+//         // color to red 
+//         event.target.style.color = "green";
 
+//     }
+// });
+
+
+// BUTTON LOGIC BETA
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Save settings when the Save button is clicked
+//     document.getElementById('stopConversionCheckbox').addEventListener('click', function() {
+//        if (document.getElementById('stopConversionCheckbox').checked) {
+//         var stopConversion = true;
+//         chrome.storage.sync.set({ stopConversion: stopConversion }, function() {
+//             console.log('Stop Conversion option saved');
+//           });
+//         } else {
+//           var stopConversion = false;
+//           chrome.storage.sync.set({ stopConversion: stopConversion }, function() {
+//             console.log('Stop Conversion option saved');
+//           });
+       
+//         } 
+//       // Save the stopConversion option to Chrome storage
+      
+// });}
+// );
+
+// on body load
+document.addEventListener("DOMContentLoaded", function() {
+const checkbox = document.getElementById('stopConversionCheckbox');
+// const checkbox = document.getElementById('myCheckbox');
+
+// Add event listener to checkbox
+checkbox.addEventListener('change', function() {
+    // Check if checkbox is checked
+    if (this.checked) {
+        // If checked, update result div with message
+        document.getElementById('result').innerText = 'Checkbox is checked';
+    } else {
+        // If not checked, update result div with different message
+        document.getElementById('result').innerText = 'Checkbox is not checked';
     }
 });
+});
+// Add event listener to checkbox
+// checkbox.addEventListener('change', function() {
+//     // Check if checkbox is checked
+//     if (this.checked) {
+//         // If checked, update result div with message
+//         document.getElementsByTagName('h1').innerText = 'Checkbox is checked';
+//     } else {
+//         // If not checked, update result div with different message
+//         // document.getElementById('result').innerText = 'Checkbox is not checked';
+//         // document.addEventListener("mouseup", function(event) {
+//         //     var selectedText = window.getSelection().toString().trim();
+//         //     if (selectedText !== "") {
+//         //         // color to red 
+//         //         event.target.style.color = "green";
+//         // }
+//         // });
+//         document.getElementsByTagName('h1').innerText = 'Checkbox is not checked';
+          
+//     }
+// });
+
+ 
