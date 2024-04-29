@@ -100,41 +100,51 @@
 // );
 
 // on body load
-document.addEventListener("DOMContentLoaded", function() {
-const checkbox = document.getElementById('stopConversionCheckbox');
-// const checkbox = document.getElementById('myCheckbox');
+// document.addEventListener("DOMContentLoaded", function() {
+// const checkbox = document.getElementById('stopConversionCheckbox');
+// // const checkbox = document.getElementById('myCheckbox');
 
-// Add event listener to checkbox
-checkbox.addEventListener('change', function() {
-    // Check if checkbox is checked
-    if (this.checked) {
-        // If checked, update result div with message
-        document.getElementById('result').innerText = 'Checkbox is checked';
-    } else {
-        // If not checked, update result div with different message
-        document.getElementById('result').innerText = 'Checkbox is not checked';
-    }
-});
-});
-// Add event listener to checkbox
+// // Add event listener to checkbox
 // checkbox.addEventListener('change', function() {
 //     // Check if checkbox is checked
 //     if (this.checked) {
 //         // If checked, update result div with message
-//         document.getElementsByTagName('h1').innerText = 'Checkbox is checked';
+//         document.getElementById('result').innerText = 'Checkbox is checked';
 //     } else {
 //         // If not checked, update result div with different message
-//         // document.getElementById('result').innerText = 'Checkbox is not checked';
-//         // document.addEventListener("mouseup", function(event) {
-//         //     var selectedText = window.getSelection().toString().trim();
-//         //     if (selectedText !== "") {
-//         //         // color to red 
-//         //         event.target.style.color = "green";
-//         // }
-//         // });
-//         document.getElementsByTagName('h1').innerText = 'Checkbox is not checked';
-          
+//         document.getElementById('result').innerText = 'Checkbox is not checked';
 //     }
 // });
+// });
+// Add event listener to checkbox
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("mouseup", function(event) {
+        var selectedText = window.getSelection().toString().trim();
+        if (selectedText !== "") {
+            // color to red 
+            event.target.style.color = "green";
+    }
+    });
+const checkbox = document.getElementById('stopConversionCheckbox');
 
+checkbox.addEventListener('change', function() {
+    // Check if checkbox is checked
+    if (this.checked) {
+        // If checked, update result div with message
+        // document.getElementsByTagName('h1').innerText = 'Checkbox is checked';
+    } else {
+        // If not checked, update result div with different message
+        document.getElementById('result').innerText = 'Checkbox is not checked';
+        document.addEventListener("mouseup", function(event) {
+            var selectedText = window.getSelection().toString().trim();
+            if (selectedText !== "") {
+                // color to red 
+                event.target.style.color = "green";
+        }
+        });
+        // document.getElementsByTagName('h1').innerText = 'Checkbox is not checked';
+          
+    }
+});
+});
  
